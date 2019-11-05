@@ -37,8 +37,8 @@ const basicAuth = async e => {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        Authorization: bAuthData
-      }
+        Authorization: bAuthData,
+      },
     });
 
     // Grab the response body as JSON
@@ -86,7 +86,7 @@ const sendMessage = message => {
 
   $('#bAuth-message').append(toast);
   $('#' + toastId).toast({
-    delay: 3000
+    delay: 3000,
   });
 
   $('#' + toastId).toast('show');
