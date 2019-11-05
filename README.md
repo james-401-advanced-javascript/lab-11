@@ -93,7 +93,10 @@
 #### Tests
 
 - How do you run tests?
-- `npm run lint`
+- `npm run lint` - Check for lint errors
+- `npm start` - Start application
+- `Click Google Signup button and ensure that it retreives correct information from Google via OAuth`
+- `Click Github Signup button and ensure that it retreives correct information from Github via OAuth`
 
 #### UML
 
