@@ -13,3 +13,5 @@ const getOAuth = async path => {
   res = await res.json();
   window.location.href = res.url;
 };
+
+module.exports = getOAuth;

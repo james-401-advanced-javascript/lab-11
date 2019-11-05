@@ -16,33 +16,31 @@
 
   - We would want to save the username and email. If we use Mongoose, that will create an id. We may also want to save the token or authenticated URL, so we can easily retreive the information from Google again in the future. Any additional saved information would depend on our application uses. Any sensitive data should obviously be encripted before storing it in the database.
 
-  - If the password has been modified/set, then hash password before storing entry in db
-
-- What are the pros and cons of setting res.cookie?
-
-  - **Pros**:
-    We can store only the token key in the cookie rather than user data
-    The user won't have to continually re-login as long as his/her token is valid
-  - **Cons**:
-    Storing token data in cookies leaves the server open to CSRF attacks
-
-- Currently, the client is just sending us an object containing the username and password to us, which is why we can just pass along (req.body). What is a better way to do this?
-
-  - A better way would be to encode the username and password send them in the header
-
 ### Modules
 
-#### `model.js`
+#### `github-mw.js`
 
-#### `users-model.js`
+#### `google-mw.js`
 
 #### `404.js`
+
+#### `401.js`
+
+#### `basic-auth.js`
 
 #### `error.js`
 
 #### `auth-router.js`
 
-#### `book- router.js`
+#### `model.js`
+
+#### `users-model.js`
+
+#### `users-schema.js`
+
+#### `github.js`
+
+#### `google.js`
 
 #### `server.js`
 
@@ -85,6 +83,7 @@
 - `GITHUB_AUTH_SERVICE`
 - `GITHUB_TOKEN_SERVICE`
 - `GITHUB_API`
+- `GITHUB_STATE`
 
 #### Running the app
 
@@ -94,7 +93,7 @@
 #### Tests
 
 - How do you run tests?
-- `npm test __tests__/`
+- `npm run lint`
 
 #### UML
 

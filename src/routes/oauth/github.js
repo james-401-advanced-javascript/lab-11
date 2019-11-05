@@ -49,7 +49,6 @@ router.get('/github', (req, res, next) => {
  */
 router.get('/github-oauth', async (req, res, next) => {
   let data = await githubMW(req);
-  console.log(data);
 
   // Once the request has been fulfilled, send a status 200 response code along with the user's name and email
   res.status(200).json({ githubData: data });

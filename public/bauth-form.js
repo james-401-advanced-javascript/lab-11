@@ -1,4 +1,6 @@
 'use strict';
+// import jquery to clear '$ not defined' errors
+var $ = require('jquery');
 
 /**
  * This function shows show simple it can be to encode something using base64 encoding. Note, this is client-side javascript, and so we don't have access to the Buffer class. So, we use a built-in function that does base64 encoding, btoa
@@ -45,13 +47,13 @@ const basicAuth = async e => {
     let authData = await authResponse.json();
 
     sendMessage(
-      `Received response:\n${authResponse.status} ${authResponse.statusText}`
+      `Received response:\n${authResponse.status} ${authResponse.statusText}`,
     );
 
     // If we got a successful response, we should have a token
     if (authResponse.status === 200) {
       sendMessage(
-        `Successfully logged in and recieved token:\n${authData.token}`
+        `Successfully logged in and recieved token:\n${authData.token}`,
       );
       console.log(authData.token);
     }
@@ -91,3 +93,5 @@ const sendMessage = message => {
 
   $('#' + toastId).toast('show');
 };
+
+module.exports = basicAuth;
